@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: #1A1919;
+  color: #FFEDD1;
+}
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3D3330; border-radius: 3px; }
+
+@theme {
+  --color-bg-base:        #1A1919;
+  --color-bg-surface:     #232120;
+  --color-bg-card:        #2A2724;
+  --color-bg-hover:       #2E2B2A;
+  --color-border:         #3D3330;
+  --color-border-strong:  #4A3F38;
+
+  --color-chrome:         #141212;
+  --color-chrome-text:    #FFEDD1;
+  --color-chrome-muted:   #7A6555;
+
+  --color-accent:         #F0684D;
+  --color-accent-hover:   #E05538;
+  --color-accent-dim:     rgba(240,104,77,0.15);
+  --color-gold:           #FFD142;
+  --color-gold-dim:       rgba(255,209,66,0.12);
+
+  --color-text-primary:   #FFEDD1;
+  --color-text-secondary: #C4A882;
+  --color-text-muted:     #7A6555;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.12s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.18s ease;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.calendar-event { cursor: grab; user-select: none; }
+.calendar-event:active { cursor: grabbing; }
